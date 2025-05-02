@@ -55,7 +55,7 @@ const StudentDetail = () => {
     if (error) return (
         <div className="student-detail-container error-state">
             <p className="error-message">{error}</p>
-            <button onClick={() => navigate("/dashboard")} className="back-btn">
+            <button onClick={() => navigate("/")} className="back-btn">
                 Back to Dashboard
             </button>
         </div>
@@ -64,7 +64,7 @@ const StudentDetail = () => {
     if (!student) return (
         <div className="student-detail-container not-found">
             <p>Student not found.</p>
-            <button onClick={() => navigate("/dashboard")} className="back-btn">
+            <button onClick={() => navigate("/")} className="back-btn">
                 Back to Dashboard
             </button>
         </div>
