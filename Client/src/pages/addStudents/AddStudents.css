@@ -1,0 +1,252 @@
+/* Main container styling */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 2rem;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 1rem auto;
+}
+
+/* Form title */
+.form-title {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: 2px solid #e0e6ed;
+  padding-bottom: 1rem;
+}
+
+.section-title {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Form styling */
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.form-group input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.error-message {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Marks section styling */
+.marks-section {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+.subject-mark-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 1.5rem;
+}
+
+.add-btn {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  height: 40px;
+  align-self: flex-end;
+}
+
+.add-btn:hover {
+  background-color: #2b6cb0;
+}
+
+.marks-list-container {
+  margin-top: 1rem;
+}
+
+.marks-title {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.marks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.mark-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mark-item:last-child {
+  border-bottom: none;
+}
+
+.mark-item-content {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.subject-name {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.mark-value {
+  font-weight: 600;
+  color: #4a5568;
+  background-color: #ebf8ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.remove-btn {
+  background-color: transparent;
+  color: #e53e3e;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.remove-btn:hover {
+  color: #c53030;
+}
+
+.no-marks-message {
+  text-align: center;
+  color: #718096;
+  font-style: italic;
+  padding: 1rem;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.submit-btn, .cancel-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-btn {
+  background-color: #38a169;
+  color: white;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: #2f855a;
+}
+
+.submit-btn:disabled {
+  background-color: #9ae6b4;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background-color: white;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+}
+
+.cancel-btn:hover {
+  background-color: #f7fafc;
+  border-color: #a0aec0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .subject-mark-inputs {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+  
+  .submit-btn, .cancel-btn {
+    width: 100%;
+  }
+}
